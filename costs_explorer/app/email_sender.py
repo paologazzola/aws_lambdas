@@ -12,7 +12,7 @@ class EmailSender:
     SUBJECT = "Daily AWS Billing Report"
     
     # The email body for recipients with non-HTML email clients.
-    BODY_PLAIN_TEXT = """AWS Billing Costs \r\n
+    BODY_PLAIN_TEXT = """AWS Costs Report \r\n
     Daily costs report\r\n
     {daily_billing_report}\r\n
     Monthly costs report\r\n
