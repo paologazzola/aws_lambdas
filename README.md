@@ -1,2 +1,2 @@
 # AWS Lambda
-Various lambdas written for control and monitor AWS resources.
+Various AWS lambdas written for controlling and monitoring AWS resources.
