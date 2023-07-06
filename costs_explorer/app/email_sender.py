@@ -1,11 +1,12 @@
 import boto3
 import os
+from ast import literal_eval
 
 
 class EmailSender:    
 
     # recipient email address taken fromma AWS Lambda environment variables configuration
-    RECIPIENT = os.environ['FROM_EMAIL_ADDRESS']
+    RECIPIENT = literal_eval(os.environ['TO_EMAIL_ADDRESSES'])
     
     SENDER = "AWS Cost Alert <{}>".format(os.environ['FROM_EMAIL_ADDRESS'])
     
@@ -55,9 +56,7 @@ class EmailSender:
         )
         response = self.client.send_email(
             Destination={
-                "ToAddresses": [
-                    self.RECIPIENT,
-                ],
+                "ToAddresses": self.RECIPIENT,
             },
             Message={
                 "Body": {
