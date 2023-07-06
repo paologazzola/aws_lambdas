@@ -9,4 +9,8 @@ Example of variables:
 - `FROM_EMAIL_ADDRESS`: `from@email.com`
 - `TO_EMAIL_ADDRESSES`: `["first_recipient@email.com", "second_recipient@email.com"]`
 
-The trigger of this Lambda is created using AWS EventBridge in order to send email everyday at a specific interval of time. For do this, create a Rule in the AWS EventBridge console of type schedule, and put a cron string. Then select the already created Lambda function. 
+The trigger of this Lambda is created using AWS EventBridge in order to send email everyday at a specific interval of time. For do this, create a Rule in the AWS EventBridge console of type schedule, and put a cron string. Then select the already created Lambda function.
+
+Usefull docs:
+- https://docs.aws.amazon.com/ses/latest/dg/send-an-email-using-sdk-programmatically.html
+- https://docs.aws.amazon.com/ses/latest/dg/request-production-access.html (if you want to move out of the SES sandbox)
