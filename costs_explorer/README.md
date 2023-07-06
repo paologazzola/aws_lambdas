@@ -11,6 +11,6 @@ Example of variables:
 
 The trigger of this Lambda is created using AWS EventBridge in order to send email everyday at a specific interval of time. For do this, create a Rule in the AWS EventBridge console of type schedule, and put a cron string. Then select the already created Lambda function.
 
-Usefull docs:
+Useful docs:
 - https://docs.aws.amazon.com/ses/latest/dg/send-an-email-using-sdk-programmatically.html
 - https://docs.aws.amazon.com/ses/latest/dg/request-production-access.html (if you want to move out of the SES sandbox)
